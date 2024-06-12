@@ -1,0 +1,20 @@
+{
+  "dependencies": {
+    "axios": "^1.7.2",
+    "express": "^4.19.2",
+    "firebase": "^10.12.2"
+  },
+  "name": "driveads",
+  "version": "1.0.0",
+  "description": "DriveAds é uma plataforma dinâmica de publicidade projetada para otimizar campanhas publicitárias através de segmentação precisa e análises em tempo real. Nossa plataforma permite que empresas criem, gerenciem e analisem seus esforços publicitários com facilidade, garantindo o máximo ROI e um engajamento eficaz do público.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node src/index.js",
+    "dev": "nodemon app.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
