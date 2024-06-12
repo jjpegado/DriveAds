@@ -42,10 +42,6 @@ app.get('/', async (req, res) => {
     }
   });
   
-  app.listen(port, () => {
-    console.log(`Servidor está rodando em http://localhost:${port}`);
-  });
-
 /* TODO: Essa request está retornando um erro, talvez porque tenha excedido o limite
   de execuções diárias da API, é interessante investigar
 */
