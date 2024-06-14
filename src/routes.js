@@ -1,8 +1,11 @@
 const express = require( 'express');
-const listarApi = require("./controller/listar");
+const {listarTodosBrApi,
+        listarPorIdApi,
+        listarDocumentosDb} = require("./controller/listar");
 
 const rotas = express();
 
-rotas.get('/', listarApi);
+rotas.get('/', listarDocumentosDb);
+rotas.get('/forecast/:id', listarPorIdApi);
 
 module.exports = rotas;
