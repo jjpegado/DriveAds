@@ -4,12 +4,10 @@ const db = require('../conexao');
 const { collection, getDocs } = require("firebase/firestore");
 
 const listarTodosBrApi = async (req, res) => {
-    // const {nome} = req.body
     try {
         const url = `http://apiadvisor.climatempo.com.br//api/v1/locale/city?country=BR&token=${apiKey}`;
     
         const response = await axios.get(url);
-        //console.log(response.data)
 
         res.send(response.data);
         } catch (error) {
@@ -20,8 +18,6 @@ const listarTodosBrApi = async (req, res) => {
 
 const listarPorIdApi = async (req, res) => {
     const {id} = req.params; // ID João Pessoa = 7364
-
-    //console.log(id)
 
     if (!id) {
         return res.status(400).send('ID é obrigatório.');

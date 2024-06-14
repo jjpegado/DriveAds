@@ -1,15 +1,21 @@
 const { initializeApp } = require("firebase/app");
 const { getFirestore } = require('firebase/firestore');
+const admin = require('firebase-admin');
+const apiKey = require('./apiKey');
+
+admin.initializeApp({
+    credential: admin.credential.cert(apiKey)
+});
 
 // Suas credenciais do Firebase
 const firebaseConfig = {
-    apiKey: "AIzaSyD01wc3t1ZpIlONAhMaqEibyBkGXcIk3cU",
-    authDomain: "driveads-159f6.firebaseapp.com",
-    projectId: "driveads-159f6",
-    storageBucket: "driveads-159f6.appspot.com",
-    messagingSenderId: "76929182598",
-    appId: "1:76929182598:web:1b25f8a9d89fabcf465a07",
-    measurementId: "G-15QY3L9LLR"
+    apiKey: process.env.FB_APIKEY,
+    authDomain: process.env.FB_AUTHDOMAIN ,
+    projectId: process.env.FB_PROJECTID ,
+    storageBucket: process.env.FB_STORAGEBUCKET ,
+    messagingSenderId: process.env.FB_MESSAGINGSENDERID,
+    appId: process.env.FB_APPID ,
+    measurementId: process.env.FB_MEASUREMENTID 
 }
 
 // Inicializa o Firebase
